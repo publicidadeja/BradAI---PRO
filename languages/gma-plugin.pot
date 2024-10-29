@@ -1,0 +1,1058 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: BrandAI - Gerenciador de Marketing Avançado\n"
+"POT-Creation-Date: 2024-10-29 14:18-0300\n"
+"PO-Revision-Date: 2024-10-29 14:17-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: gerenciador-marketing-avancado.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: gerenciador-marketing-avancado.php:106
+msgid "Escolha ou faça upload de uma imagem"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:107
+msgid "Usar esta imagem"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:232
+msgid "Você não tem permissão para realizar esta ação."
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:238
+msgid "ID de material inválido."
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:417
+msgid "Informações da Campanha"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:442
+msgid "Tipo de Campanha:"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:444
+#: gerenciador-marketing-avancado.php:527
+#: templates/pagina-listar-materiais.php:25
+#: templates/pagina-listar-materiais.php:290
+msgid "Marketing"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:445
+msgid "Aprovação"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:474
+msgid "GMA Settings"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:475
+msgid "Settings"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:491 includes/openai-config.php:64
+msgid "Save Settings"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:504
+#: gerenciador-marketing-avancado.php:511
+msgid "General Settings"
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:520
+msgid "General settings for the Advanced Marketing Manager."
+msgstr ""
+
+#: gerenciador-marketing-avancado.php:528
+#: templates/pagina-listar-materiais.php:24
+#: templates/pagina-listar-materiais.php:290
+msgid "Approval"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:9
+#: includes/admin-gerenciamento-materiais.php:48
+msgid "Material Management"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:10
+msgid "Manage Materials"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:31
+msgid "Material deleted successfully."
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:33
+msgid "Error deleting material."
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:49
+msgid "Add New Material"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:52
+msgid "All"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:53
+#: templates/editar-material-aprovacao.php:88
+#: templates/pagina-listar-materiais.php:19
+msgid "Pending"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:54
+#: templates/editar-material-aprovacao.php:89
+#: templates/pagina-listar-materiais.php:17
+#: templates/pagina-listar-materiais.php:33
+msgid "Approved"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:55
+#: templates/editar-material-aprovacao.php:90
+#: templates/pagina-listar-materiais.php:18
+#: templates/pagina-listar-materiais.php:46
+msgid "Rejected"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:61
+msgid "ID"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:62
+#: templates/pagina-novo-material.php:47
+msgid "Image"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:63
+#: templates/pagina-novo-material.php:63
+msgid "Copy"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:64
+msgid "Status"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:65
+#: templates/pagina-novo-material.php:26
+msgid "Campaign"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:66
+msgid "Created On"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:67
+#: templates/pagina-campanhas.php:101 templates/pagina-criar-categoria.php:157
+msgid "Actions"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:88
+#: templates/pagina-campanhas.php:146 templates/pagina-listar-materiais.php:311
+#: templates/single-campanha-aprovacao.php:324
+#: templates/single-campanha.php:414 templates/single-campanha.php:469
+msgid "Edit"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:89
+msgid "Are you sure you want to delete this material?"
+msgstr ""
+
+#: includes/admin-gerenciamento-materiais.php:89
+#: templates/pagina-campanhas.php:151 templates/pagina-listar-materiais.php:312
+msgid "Delete"
+msgstr ""
+
+#: includes/admin-menu.php:13 templates/pagina-principal.php:20
+msgid "Advanced Marketing Manager"
+msgstr ""
+
+#: includes/admin-menu.php:14
+msgid "BrandAI"
+msgstr ""
+
+#: includes/admin-menu.php:24
+msgid "Campaigns"
+msgstr ""
+
+#: includes/admin-menu.php:25 templates/pagina-editar-campanha.php:5
+msgid "Edit Campaign"
+msgstr ""
+
+#: includes/admin-menu.php:26 templates/pagina-relatorio-campanhas.php:56
+msgid "Materials"
+msgstr ""
+
+#: includes/admin-menu.php:27 templates/pagina-principal.php:80
+msgid "New Material"
+msgstr ""
+
+#: includes/admin-menu.php:28 templates/editar-material-marketing.php:55
+#: templates/single-campanha-aprovacao.php:327
+msgid "Edit Material"
+msgstr ""
+
+#: includes/admin-menu.php:29
+msgid "Categories"
+msgstr ""
+
+#: includes/admin-menu.php:30
+msgid "Report"
+msgstr ""
+
+#: includes/admin-menu.php:92
+msgid "Campaign not found."
+msgstr ""
+
+#: includes/admin-menu.php:95
+msgid "Campaign ID not provided."
+msgstr ""
+
+#: includes/admin-menu.php:147
+msgid "Material created successfully!"
+msgstr ""
+
+#: includes/admin-menu.php:149
+msgid "Error creating material. Please try again. Check the error log."
+msgstr ""
+
+#: includes/admin-menu.php:152
+msgid "Material already created. Refresh the page."
+msgstr ""
+
+#: includes/admin-menu.php:168
+msgid "Invalid parameters."
+msgstr ""
+
+#: includes/admin-menu.php:177 includes/materiais.php:393
+msgid "Material not found."
+msgstr ""
+
+#: includes/admin-menu.php:182
+msgid "Campaign type does not match the material."
+msgstr ""
+
+#: includes/admin-menu.php:196
+msgid "Approval material updated successfully."
+msgstr ""
+
+#: includes/admin-menu.php:199
+msgid "Error updating approval material."
+msgstr ""
+
+#: includes/admin-menu.php:207
+msgid "Marketing material updated successfully."
+msgstr ""
+
+#: includes/admin-menu.php:209
+msgid "Error updating marketing material."
+msgstr ""
+
+#: includes/admin-menu.php:227
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: includes/admin-menu.php:238 templates/pagina-criar-categoria.php:21
+msgid "Error deleting category."
+msgstr ""
+
+#: includes/admin-menu.php:248 templates/pagina-criar-categoria.php:46
+msgid "Error updating category."
+msgstr ""
+
+#: includes/admin-menu.php:277
+msgid "Error updating category: "
+msgstr ""
+
+#: includes/admin-menu.php:295
+msgid "Error deleting category: "
+msgstr ""
+
+#: includes/materiais.php:41
+msgid "Error creating material: "
+msgstr ""
+
+#: includes/materiais.php:92
+msgid "Error in MySQL while updating material: "
+msgstr ""
+
+#: includes/materiais.php:95
+msgid "No rows were updated for material ID: "
+msgstr ""
+
+#: includes/materiais.php:129
+msgid "Nonce verification failed or form data missing."
+msgstr ""
+
+#: includes/materiais.php:141
+msgid "Error deleting material: "
+msgstr ""
+
+#: includes/materiais.php:149
+msgid "Unauthorized action."
+msgstr ""
+
+#: includes/materiais.php:154
+msgid "Material ID not provided."
+msgstr ""
+
+#: includes/materiais.php:220 templates/single-campanha-aprovacao.php:345
+msgid "No materials found for this campaign."
+msgstr ""
+
+#: includes/materiais.php:255
+msgid "Material approved successfully!"
+msgstr ""
+
+#: includes/materiais.php:257
+msgid "Error approving material."
+msgstr ""
+
+#: includes/materiais.php:260 includes/materiais.php:280
+#: includes/materiais.php:307 includes/materiais.php:396
+msgid "Invalid material ID."
+msgstr ""
+
+#: includes/materiais.php:275
+msgid "Material disapproved successfully!"
+msgstr ""
+
+#: includes/materiais.php:277
+msgid "Error disapproving material."
+msgstr ""
+
+#: includes/materiais.php:302
+msgid "Material edited successfully!"
+msgstr ""
+
+#: includes/materiais.php:304
+msgid "Error editing material."
+msgstr ""
+
+#: includes/materiais.php:362
+msgid "Error updating marketing material: "
+msgstr ""
+
+#: includes/materiais.php:377
+msgid "Error saving feedback."
+msgstr ""
+
+#: includes/materiais.php:380
+msgid "Invalid ID or feedback."
+msgstr ""
+
+#: includes/materiais.php:412
+msgid "Configure your OpenAI API key in the plugin settings."
+msgstr ""
+
+#: includes/materiais.php:447
+msgid "Error connecting to OpenAI: "
+msgstr ""
+
+#: includes/materiais.php:455
+msgid "Error getting suggestions."
+msgstr ""
+
+#: includes/materiais.php:472
+msgid "Marketing Manager: Status Update"
+msgstr ""
+
+#: includes/openai-config.php:10 includes/openai-config.php:49
+msgid "OpenAI Settings"
+msgstr ""
+
+#: includes/openai-config.php:17 includes/openai-config.php:53
+msgid "OpenAI API Key"
+msgstr ""
+
+#: includes/openai-config.php:36 includes/openai-config.php:60
+msgid "Enter your OpenAI API key"
+msgstr ""
+
+#: includes/openai-config.php:43
+msgid "API Key saved successfully!"
+msgstr ""
+
+#: includes/openai-config.php:75
+msgid "Language Settings"
+msgstr ""
+
+#: includes/openai-config.php:82
+msgid "Plugin Language"
+msgstr ""
+
+#: includes/openai-config.php:95
+msgid "English"
+msgstr ""
+
+#: includes/openai-config.php:96
+msgid "Portuguese"
+msgstr ""
+
+#: includes/openai-config.php:97
+msgid "Spanish"
+msgstr ""
+
+#: includes/taxonomies.php:10
+msgctxt "taxonomy general name"
+msgid "Categorias de Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:11
+msgctxt "taxonomy singular name"
+msgid "Categoria de Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:12
+msgid "Buscar Categorias"
+msgstr ""
+
+#: includes/taxonomies.php:13
+msgid "Todas as Categorias"
+msgstr ""
+
+#: includes/taxonomies.php:14
+msgid "Categoria Pai"
+msgstr ""
+
+#: includes/taxonomies.php:15
+msgid "Categoria Pai:"
+msgstr ""
+
+#: includes/taxonomies.php:16
+msgid "Editar Categoria"
+msgstr ""
+
+#: includes/taxonomies.php:17
+msgid "Atualizar Categoria"
+msgstr ""
+
+#: includes/taxonomies.php:18
+msgid "Adicionar Nova Categoria"
+msgstr ""
+
+#: includes/taxonomies.php:19
+msgid "Nome da Nova Categoria"
+msgstr ""
+
+#: includes/taxonomies.php:20
+msgid "Categorias de Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:37
+msgctxt "post type general name"
+msgid "Campanhas"
+msgstr ""
+
+#: includes/taxonomies.php:38
+msgctxt "post type singular name"
+msgid "Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:39
+msgctxt "admin menu"
+msgid "Campanhas"
+msgstr ""
+
+#: includes/taxonomies.php:40
+msgctxt "add new on admin bar"
+msgid "Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:41
+msgctxt "campanha"
+msgid "Adicionar Nova"
+msgstr ""
+
+#: includes/taxonomies.php:42
+msgid "Adicionar Nova Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:43
+msgid "Nova Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:44
+msgid "Editar Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:45
+msgid "Ver Campanha"
+msgstr ""
+
+#: includes/taxonomies.php:46
+msgid "Todas as Campanhas"
+msgstr ""
+
+#: includes/taxonomies.php:47
+msgid "Buscar Campanhas"
+msgstr ""
+
+#: includes/taxonomies.php:48
+msgid "Campanhas Pai:"
+msgstr ""
+
+#: includes/taxonomies.php:49
+msgid "Nenhuma campanha encontrada."
+msgstr ""
+
+#: includes/taxonomies.php:50
+msgid "Nenhuma campanha encontrada na lixeira."
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:38
+msgid "Edit Approval Material"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:50
+#: templates/editar-material-marketing.php:67
+#: templates/editar-material-marketing.php:200
+#: templates/editar-material-marketing.php:395
+msgid "Material Preview"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:55
+#: templates/editar-material-marketing.php:72
+msgid "Update Image"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:63
+#: templates/editar-material-marketing.php:79
+msgid "Material Copy"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:71
+#: templates/editar-material-aprovacao.php:388
+#: templates/editar-material-marketing.php:86
+#: templates/pagina-novo-material.php:71 templates/pagina-novo-material.php:112
+msgid "Get AI Suggestions"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:74
+#: templates/editar-material-marketing.php:89
+#: templates/pagina-novo-material.php:74
+msgid "AI Suggestions"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:85
+msgid "Approval Status"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:97
+msgid "Feedback"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:102
+msgid "Characters:"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:110
+#: templates/editar-material-marketing.php:164
+msgid "Update Material"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:114
+#: templates/editar-material-marketing.php:168
+#: templates/pagina-criar-categoria.php:79
+#: templates/single-campanha-aprovacao.php:333
+msgid "Cancel"
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:362
+#: templates/pagina-novo-material.php:86
+msgid "Please enter some text first."
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:366
+#: templates/pagina-novo-material.php:90
+msgid "Getting suggestions..."
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:381
+#: templates/pagina-novo-material.php:105
+msgid "Failed to get suggestions. Please try again."
+msgstr ""
+
+#: templates/editar-material-aprovacao.php:385
+msgid "Error connecting to the server."
+msgstr ""
+
+#: templates/editar-material-marketing.php:7
+#: templates/editar-material-marketing.php:13
+msgid "Material não encontrado."
+msgstr ""
+
+#: templates/editar-material-marketing.php:31
+msgid "Material atualizado com sucesso!"
+msgstr ""
+
+#: templates/editar-material-marketing.php:37
+msgid "Erro ao atualizar material."
+msgstr ""
+
+#: templates/editar-material-marketing.php:156
+#: templates/pagina-novo-material.php:142
+msgid "Canva Link"
+msgstr ""
+
+#: templates/editar-material-marketing.php:190
+#: templates/editar-material-marketing.php:385
+msgid "Choose or upload an image"
+msgstr ""
+
+#: templates/editar-material-marketing.php:192
+#: templates/editar-material-marketing.php:387
+msgid "Use this image"
+msgstr ""
+
+#: templates/pagina-campanhas.php:8
+msgid "Campaign Manager"
+msgstr ""
+
+#: templates/pagina-campanhas.php:13
+msgid "Campaign successfully deleted!"
+msgstr ""
+
+#: templates/pagina-campanhas.php:28
+msgid "📝 New Campaign"
+msgstr ""
+
+#: templates/pagina-campanhas.php:34 templates/pagina-editar-campanha.php:32
+#: templates/pagina-listar-materiais.php:28
+msgid "Campaign Name"
+msgstr ""
+
+#: templates/pagina-campanhas.php:38
+msgid "Client/Project Name"
+msgstr ""
+
+#: templates/pagina-campanhas.php:42
+msgid "Select a category (Create in \"Categories\")"
+msgstr ""
+
+#: templates/pagina-campanhas.php:52
+msgid "Select campaign type"
+msgstr ""
+
+#: templates/pagina-campanhas.php:53 templates/pagina-editar-campanha.php:68
+msgid "Marketing Campaign"
+msgstr ""
+
+#: templates/pagina-campanhas.php:54 templates/pagina-editar-campanha.php:71
+msgid "Content Approval"
+msgstr ""
+
+#: templates/pagina-campanhas.php:58
+msgid "Create Campaign"
+msgstr ""
+
+#: templates/pagina-campanhas.php:66
+msgid "🔍 Filter Campaigns"
+msgstr ""
+
+#: templates/pagina-campanhas.php:72
+msgid "All categories"
+msgstr ""
+
+#: templates/pagina-campanhas.php:81
+#: templates/pagina-relatorio-campanhas.php:25
+msgid "Filter"
+msgstr ""
+
+#: templates/pagina-campanhas.php:89
+msgid "📋 Existing Campaigns"
+msgstr ""
+
+#: templates/pagina-campanhas.php:96
+msgid "Name"
+msgstr ""
+
+#: templates/pagina-campanhas.php:97 templates/pagina-editar-campanha.php:42
+msgid "Client/Project"
+msgstr ""
+
+#: templates/pagina-campanhas.php:98 templates/pagina-editar-campanha.php:52
+msgid "Category"
+msgstr ""
+
+#: templates/pagina-campanhas.php:99
+msgid "Creation Date"
+msgstr ""
+
+#: templates/pagina-campanhas.php:100
+msgid "Type"
+msgstr ""
+
+#: templates/pagina-campanhas.php:121
+msgid "No category"
+msgstr ""
+
+#: templates/pagina-campanhas.php:135
+msgid "Add Material"
+msgstr ""
+
+#: templates/pagina-campanhas.php:140
+msgid "View Campaign"
+msgstr ""
+
+#: templates/pagina-campanhas.php:379
+msgid "Are you sure you want to delete this campaign?"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:16
+msgid "Category deleted successfully!"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:41
+msgid "Category updated successfully!"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:58
+msgid "Edit Category"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:66
+msgid "New Name:"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:74
+msgid "Save"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:88
+msgid "New Category"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:99
+msgid "Category created successfully!"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:104
+msgid ""
+"Error creating category. Check if a category with this name already exists."
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:114
+msgid "Create New Category"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:119
+#: templates/pagina-criar-categoria.php:156
+msgid "Category Name"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:124
+msgid "Enter the category name"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:130
+msgid "Create Category"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:139
+msgid "Existing Categories"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:147
+msgid "No categories registered."
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:148
+msgid "Create your first category using the form next to it."
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:490
+msgid "🗑️ Are you sure you want to delete this category?"
+msgstr ""
+
+#: templates/pagina-criar-categoria.php:497
+msgid "Please enter a name for the category."
+msgstr ""
+
+#: templates/pagina-editar-campanha.php:15
+msgid "Campaign updated successfully!"
+msgstr ""
+
+#: templates/pagina-editar-campanha.php:18
+msgid "Error updating campaign. Please try again."
+msgstr ""
+
+#: templates/pagina-editar-campanha.php:25
+msgid "Campaign Information"
+msgstr ""
+
+#: templates/pagina-editar-campanha.php:54
+msgid "Select a category (optional)"
+msgstr ""
+
+#: templates/pagina-editar-campanha.php:65
+msgid "Campaign Type"
+msgstr ""
+
+#: templates/pagina-editar-campanha.php:78
+msgid "Save Changes"
+msgstr ""
+
+#: templates/pagina-editar-campanha.php:81
+#: templates/pagina-novo-material.php:155
+msgid "Back"
+msgstr ""
+
+#: templates/pagina-listar-materiais.php:11
+msgid "List Materials"
+msgstr ""
+
+#: templates/pagina-listar-materiais.php:16
+msgid "All Statuses"
+msgstr ""
+
+#: templates/pagina-listar-materiais.php:23
+msgid "All Types"
+msgstr ""
+
+#: templates/pagina-listar-materiais.php:59
+msgid "For Editing"
+msgstr ""
+
+#: templates/pagina-listar-materiais.php:273
+msgid "Campaign not found"
+msgstr ""
+
+#: templates/pagina-novo-material.php:16
+msgid "Create New Material"
+msgstr ""
+
+#: templates/pagina-novo-material.php:29
+msgid "Select a campaign"
+msgstr ""
+
+#: templates/pagina-novo-material.php:54
+msgid "Select"
+msgstr ""
+
+#: templates/pagina-novo-material.php:67
+msgid "characters"
+msgstr ""
+
+#: templates/pagina-novo-material.php:109
+msgid "Error connecting to server."
+msgstr ""
+
+#: templates/pagina-novo-material.php:151
+msgid "Create Material"
+msgstr ""
+
+#: templates/pagina-novo-material.php:186
+#: templates/pagina-novo-material.php:418
+msgid "Select Image"
+msgstr ""
+
+#: templates/pagina-novo-material.php:188
+#: templates/pagina-novo-material.php:420
+msgid "Use This Image"
+msgstr ""
+
+#: templates/pagina-novo-material.php:226
+#: templates/pagina-novo-material.php:456
+msgid "Please fill in all required fields."
+msgstr ""
+
+#: templates/pagina-principal.php:26 templates/pagina-principal.php:93
+msgid "Marketing Campaigns"
+msgstr ""
+
+#: templates/pagina-principal.php:30 templates/pagina-principal.php:41
+#: templates/pagina-principal.php:54 templates/pagina-principal.php:65
+msgid "View All"
+msgstr ""
+
+#: templates/pagina-principal.php:37 templates/pagina-principal.php:94
+msgid "Approval Campaigns"
+msgstr ""
+
+#: templates/pagina-principal.php:50 templates/pagina-principal.php:95
+msgid "Marketing Materials"
+msgstr ""
+
+#: templates/pagina-principal.php:61 templates/pagina-principal.php:96
+msgid "Approval Materials"
+msgstr ""
+
+#: templates/pagina-principal.php:74
+msgid "Quick Actions"
+msgstr ""
+
+#: templates/pagina-principal.php:77
+msgid "New Campaign"
+msgstr ""
+
+#: templates/pagina-principal.php:89
+msgid "Report Summary"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:13
+msgid "Campaign Report"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:18
+msgid "Analysis Period:"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:20
+msgid "Monthly"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:21
+msgid "Weekly"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:22
+msgid "Daily"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:41
+#: templates/pagina-relatorio-campanhas.php:63
+#: templates/pagina-relatorio-campanhas.php:362
+msgid "Views"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:46
+#: templates/pagina-relatorio-campanhas.php:67
+#: templates/pagina-relatorio-campanhas.php:381
+msgid "Clicks"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:51
+#: templates/pagina-relatorio-campanhas.php:71
+#: templates/pagina-relatorio-campanhas.php:400
+msgid "Downloads"
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:80
+msgid "No data found for the selected period."
+msgstr ""
+
+#: templates/pagina-relatorio-campanhas.php:81
+msgid "Try selecting a different period or wait for more data to be collected."
+msgstr ""
+
+#: templates/single-campanha-aprovacao.php:315
+msgid "Material"
+msgstr ""
+
+#: templates/single-campanha-aprovacao.php:316
+msgid "Zoom Image"
+msgstr ""
+
+#: templates/single-campanha-aprovacao.php:320
+msgid "Status:"
+msgstr ""
+
+#: templates/single-campanha-aprovacao.php:322
+msgid "Approve"
+msgstr ""
+
+#: templates/single-campanha-aprovacao.php:323
+msgid "Reject"
+msgstr ""
+
+#: templates/single-campanha-aprovacao.php:328
+msgid "What changes to the art?"
+msgstr ""
+
+#: templates/single-campanha-aprovacao.php:330
+msgid "Edit Copy:"
+msgstr ""
+
+#: templates/single-campanha-aprovacao.php:332
+msgid "Save Edit"
+msgstr ""
+
+#: templates/single-campanha.php:389
+msgid "Created on:"
+msgstr ""
+
+#: templates/single-campanha.php:395
+msgid "Download Image"
+msgstr ""
+
+#: templates/single-campanha.php:403
+msgid "Campaign Statistics"
+msgstr ""
+
+#: templates/single-campanha.php:405
+msgid "Views:"
+msgstr ""
+
+#: templates/single-campanha.php:406
+msgid "Clicks:"
+msgstr ""
+
+#: templates/single-campanha.php:407
+msgid "Conversions:"
+msgstr ""
+
+#: templates/single-campanha.php:423
+msgid "About the Campaign"
+msgstr ""
+
+#: templates/single-campanha.php:432
+msgid "Campaign Copy"
+msgstr ""
+
+#: templates/single-campanha.php:436 templates/single-campanha.php:465
+msgid "Copy Text"
+msgstr ""
+
+#: templates/single-campanha.php:448
+msgid "Campaign Materials"
+msgstr ""
+
+#: templates/single-campanha.php:474
+msgid "Download"
+msgstr ""
+
+#: templates/single-campanha.php:491
+msgid "Campaign Image"
+msgstr ""
+
+#: templates/single-campanha.php:501
+msgid "Text copied to clipboard!"
+msgstr ""
+
+#: templates/single-campanha.php:504
+msgid "Failed to copy text:"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "BrandAI - Gerenciador de Marketing Avançado"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://publicidadeja.com.br"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Um plugin avançado para gerenciar campanhas de marketing e materiais."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Publicidade Já"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://publicidadeja.com.br/"
+msgstr ""

@@ -1,0 +1,295 @@
+<?php
+get_header();
+
+$campanha_id = get_query_var('campanha_id'); 
+gma_atualizar_visualizacao_campanha($campanha_id); 
+$campanha = gma_obter_campanha($campanha_id);
+$estatisticas = gma_obter_estatisticas($campanha_id); 
+
+if ($campanha) :
+    ?>
+    <div class="gma-campanha-wrapper">
+        <div class="gma-campanha-hero" style="background-image: url('<?php echo esc_url($campanha->imagem_url); ?>');">
+            <div class="gma-campanha-hero-content">
+                <h1 class="gma-campanha-title"><?php echo esc_html($campanha->nome); ?></h1>
+                <div class="gma-campanha-dates">
+                    <span class="gma-date-item"><i class="fas fa-calendar"></i> <?php _e('Created on:', 'gma-plugin'); ?> <?php echo esc_html(date('d/m/Y', strtotime($campanha->data_criacao))); ?></span>
+                </div>
+            </div>
+            <?php if (!empty($campanha->imagem_url)) : ?>
+                <a href="<?php echo esc_url($campanha->imagem_url); ?>" download class="gma-download-button">
+                    <i class="fas fa-download"></i>
+                </a>
+            <?php endif; ?>
+        </div>
+
+        <div class="gma-campanha-content">
+            <div class="gma-campanha-sidebar">
+                <div class="gma-sidebar-item gma-campanha-stats">
+                    <h3><?php _e('Campaign Statistics', 'gma-plugin'); ?></h3>
+                    <ul>
+                        <li><i class="fas fa-eye"></i> <?php _e('Views:', 'gma-plugin'); ?> <?php echo esc_html($estatisticas->visualizacoes); ?></li>
+                        <li><i class="fas fa-mouse-pointer"></i> <?php _e('Clicks:', 'gma-plugin'); ?> <?php echo esc_html($estatisticas->cliques); ?></li>
+                        <li><i class="fas fa-chart-line"></i> <?php _e('Conversions:', 'gma-plugin'); ?> <?php echo esc_html($estatisticas->conversoes); ?></li>
+                    </ul>
+                </div>
+                <?php if (!empty($campanha->link_canva)) : ?>
+                    <div class="gma-sidebar-item">
+                        <a href="<?php echo esc_url($campanha->link_canva); ?>" target="_blank" class="gma-button gma-button-primary" data-campanha-id="<?php echo esc_attr($campanha_id); ?>"><?php _e('Edit Art', 'gma-plugin'); ?></a>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <div class="gma-campanha-main">
+                <?php if (!empty($campanha->descricao)) : ?>
+                    <div class="gma-campanha-section gma-campanha-descricao">
+                        <h2><?php _e('About the Campaign', 'gma-plugin'); ?></h2>
+                        <div class="gma-content-expandable">
+                            <?php echo wp_kses_post($campanha->descricao); ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+            <?php if (!empty($campanha->copy)) : ?>
+            <div class="gma-campanha-section gma-campanha-copy">
+                <h2><?php _e('Campaign Copy', 'gma-plugin'); ?></h2>
+                <div class="gma-content-expandable">
+                    <p id="copy-text"><?php echo wp_kses_post($campanha->copy); ?></p>
+                    <button class="gma-copy-button" onclick="copiarTexto('copy-text')"><?php _e('Copy Text', 'gma-plugin'); ?></button>
+                </div>
+            </div>
+            <?php endif; ?>
+
+                <?php
+                $materiais = gma_obter_materiais_campanha($campanha_id);
+                if ($materiais) :
+                    ?>
+                    <div class="gma-campanha-section gma-campanha-materiais">
+                        <h2><?php _e('Campaign Materials', 'gma-plugin'); ?></h2>
+                        <div class="gma-materiais-grid">
+                            <?php foreach ($materiais as $material) : ?>
+                                <div class="gma-material-card">
+                                    <?php if (!empty($material->imagem_url)) : ?>
+                                        <div class="gma-material-image" style="background-image: url('<?php echo esc_url($material->imagem_url); ?>');">
+                                            <div class="gma-material-overlay">
+                                                <?php if (!empty($material->link_canva)) : ?>
+                                                    <a href="<?php echo esc_url($material->link_canva); ?>" target="_blank" class="gma-button gma-button-secondary" data-campanha-id="<?php echo esc_attr($campanha_id); ?>"><?php _e('Edit on Canva', 'gma-plugin'); ?></a>
+                                                <?php endif; ?>
+                                            </div>
+                                            <a href="<?php echo esc_url($material->imagem_url); ?>" download class="gma-download-button">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if (!empty($material->copy)) : ?>
+                                        <div class="gma-material-copy">
+                                            <p id="copy-text-<?php echo esc_attr($material->id); ?>"><?php echo wp_kses_post($material->copy); ?></p>
+                                            <button class="gma-copy-button" onclick="copiarTexto('copy-text-<?php echo esc_attr($material->id); ?>')"><?php _e('Copy Text', 'gma-plugin'); ?></button>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageLightbox" class="lightbox">
+        <span class="close-lightbox">×</span>
+        <img class="lightbox-content" id="lightboxImage">
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+(function($) {
+    if (typeof $ === 'undefined' || typeof Swiper === 'undefined' || typeof gsap === 'undefined' || typeof Swal === 'undefined') {
+        console.error('jQuery, Swiper, GSAP ou SweetAlert2 não estão carregados corretamente.');
+        return;
+    }
+
+    $(document).ready(function() {
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        $('.swiper-wrapper').on('click', '.gma-aprovar, .gma-reprovar', function() {
+            var $button = $(this);
+            var $material = $button.closest('.gma-material');
+            var materialId = $material.data('material-id');
+            var acao = $button.hasClass('gma-aprovar') ? 'aprovar' : 'reprovar';
+            
+            $.ajax({
+                url: gmaAjax.ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'gma_' + acao + '_material',
+                    material_id: materialId,
+                    nonce: gmaAjax.nonce
+                },
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: 'Material ' + (acao === 'aprovar' ? 'approved' : 'rejected') + ' successfully!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+
+                        $material.removeClass('status-aprovado status-reprovado status-pendente').addClass('status-' + acao);
+                        $material.find('.gma-status').text('Status: ' + acao.charAt(0).toUpperCase() + acao.slice(1));
+                        $button.prop('disabled', true).siblings().prop('disabled', false);
+                        
+                        gsap.to($material, {
+                            duration: 0.3,
+                            scale: 1.05,
+                            yoyo: true,
+                            repeat: 1,
+                            ease: "power2.inOut",
+                            onComplete: function() {
+                                swiper.slideNext();
+                            }
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Error: ' + response.data.message
+                        });
+                    }
+                },
+                error: function() {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Error processing request. Please try again.'
+                    });
+                }
+            });
+        });
+
+        $('.swiper-wrapper').on('click', '.gma-editar', function() {
+            var $material = $(this).closest('.gma-material');
+            var $edicao = $material.find('.gma-edicao');
+            
+            $edicao.slideToggle(300);
+        });
+
+        $('.swiper-wrapper').on('click', '.gma-cancelar-edicao', function() {
+            var $material = $(this).closest('.gma-material');
+            var $edicao = $material.find('.gma-edicao');
+            
+            $edicao.slideUp(300);
+        });
+
+        $('.swiper-wrapper').on('click', '.gma-salvar-edicao', function() {
+            var $material = $(this).closest('.gma-material');
+            var materialId = $material.data('material-id');
+            var alteracaoArte = $material.find('.gma-alteracao-arte').val();
+            var novaCopy = $material.find('.gma-copy-edit').val();
+            
+            $.ajax({
+                url: gmaAjax.ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'gma_editar_material',
+                    material_id: materialId,
+                    alteracao_arte: alteracaoArte,
+                    nova_copy: novaCopy,
+                    nonce: gmaAjax.nonce
+                },
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: 'Material edited successfully!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+
+                        $material.find('.gma-edicao').slideUp(300);
+                        $material.find('.gma-copy').text(novaCopy);
+                        $material.removeClass('status-aprovado status-reprovado status-pendente').addClass('status-pendente');
+                        $material.find('.gma-status').text('Status: Pending');
+                        $material.find('.gma-aprovar, .gma-reprovar').prop('disabled', false);
+                        
+                        gsap.from($material.find('.gma-copy'), {
+                            duration: 0.5,
+                            opacity: 0,
+                            y: 10,
+                            ease: "power2.out"
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Error: ' + response.data.message
+                        });
+                    }
+                },
+                error: function() {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Error processing request. Please try again.'
+                    });
+                }
+            });
+        });
+
+        // Abrir o lightbox ao clicar na imagem
+        $('.swiper-wrapper').on('click', '.lightbox-trigger', function(e) {
+            e.preventDefault();
+            var imageUrl = $(this).attr('src');
+            $('#lightboxImage').attr('src', imageUrl);
+            $('#imageLightbox').fadeIn('fast');
+        });
+
+        // Fechar o lightbox ao clicar no botão de fechar ou fora da imagem
+        $('.close-lightbox, .lightbox').click(function() {
+            $('#imageLightbox').fadeOut('fast');
+        });
+
+        // Adicionar evento de redimensionamento da janela
+        $(window).on('resize', function() {
+            swiper.update();
+        });
+
+        // Desabilitar o swipe quando estiver editando
+        $('.swiper-wrapper').on('focus', '.gma-alteracao-arte, .gma-copy-edit', function() {
+            swiper.allowTouchMove = false;
+        });
+
+        $('.swiper-wrapper').on('blur', '.gma-alteracao-arte, .gma-copy-edit', function() {
+            swiper.allowTouchMove = true;
+        });
+    });
+})(jQuery);
+</script>
+
+<?php
+endif;
+get_footer();
+?>
